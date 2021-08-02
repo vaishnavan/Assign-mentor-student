@@ -11,6 +11,9 @@ app.get("/", (req, res) => {
     res.json({message:"Student and Mentor Assign API creation"})
 })
 
+app.use("/api", require("./route/mentor.route"));
+app.use("/api", require("./route/student.route"));
+
 app.listen((port), () => {
     console.log(`server up and running on port ${port}`);
 });
